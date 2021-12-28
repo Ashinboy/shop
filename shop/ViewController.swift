@@ -30,14 +30,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
+   
     //top
-    @IBAction func nextBtn(_ sender: UIButton) {
+    @IBAction func nextBtn(_ sender: Any) {
         index = (index + 1 ) % topImages.count
         topImage.image = UIImage(named: topImages[index])
         syncTop(index: index)
     }
-    @IBAction func lastBtn(_ sender: UIButton) {
+    @IBAction func lastBtn(_ sender: Any) {
         index = (index + topImages.count - 1) % topImages.count
         print(index)
         topImage.image = UIImage(named: topImages[index])
@@ -51,13 +51,13 @@ class ViewController: UIViewController {
     
     //bot
     
-    @IBAction func nextBtnBot(_ sender: UIButton) {
+    @IBAction func nextBtnBot(_ sender: Any) {
         sizeIndex = (sizeIndex + 1) % sizrImages.count
         botImage.image = UIImage(named: sizrImages[sizeIndex])
         syncBot(sizeIndex: sizeIndex)
     }
     
-    @IBAction func lastBtnBot(_ sender: UIButton) {
+    @IBAction func lastBtnBot(_ sender: Any) {
         sizeIndex = (sizeIndex + sizrImages.count - 1) % sizrImages.count
         print(sizeIndex)
         botImage.image = UIImage(named: sizrImages[sizeIndex])
